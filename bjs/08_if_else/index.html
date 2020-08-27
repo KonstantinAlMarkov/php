@@ -5,6 +5,8 @@
     <title>Угадайка</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>           
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
@@ -12,14 +14,34 @@
 <div class="container">
     <div class="row game-card align-items-center">
         <div class="col col-md-4 offset-md-4">
+            <!--card для условий-->
+            <div id="gameVal">
+                <div class="card text-center" id="gameValuesCollapse">
+                    <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button id="gameCollapseBut" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Задайте любое целое число от 0 до 100, а я его угадаю
+                        </button>
+                    </h5>
+                    </div> 
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#gameVal">
+                    <div class="card-body">
+                        <input type="number" id="minValField" min="-999" step="1" value="0">Минимальное число<br>
+                        <input type="number" id="maxValField" min="999" step="1" value="100">Максимальное число<br>            
+                    </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="card text-center">
                 <div class="card-header">
-                    <p class="m-0">Вопрос №<span id="orderNumberField">5</span></p>
+                    <p class="m-0">Вопрос №<span id="orderNumberField">0</span></p>
                 </div>
                 <div class="card-body">
                     <div class="row no-gutters">
                         <div class="col">
-                            <h3 class="card-title m-0"><span id="answerField">Вы загадали число 5?</span></h3>
+                            <h3 class="card-title m-0"><span id="answerField">Загадайте число и нажмите "Играть", я отгадаю</span></h3>
                         </div>
                     </div>
                 </div>
@@ -31,7 +53,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-link" id="btnRetry">Заново</button>
+                    <button class="btn btn-link" id="btnRetry">Играть</button>
                 </div>
             </div>
         </div>
