@@ -1,0 +1,51 @@
+/*.container{
+    background-color: black;
+}*/
+
+h3{
+    font-size: larger;
+}
+
+h4, h5{
+    font-size: medium;
+}
+
+.card-title {
+    margin-top: 0px;
+    margin-bottom: 0px;     
+}
+
+h3,h4,h5,p{
+/*    padding-top: 0px;
+   padding-bottom: 0px;  */   
+    margin-top: 0px;
+    margin-bottom: 0px;    
+}
+
+.col p{
+    font-size: small;    
+}
+
+.card-header {
+    background-color: lightblue;
+}
+
+.card-body {
+    background-color: lightgray;
+    padding-top: 5px;
+    padding-bottom: 5px;    
+}
+
+.card-header p{
+    font-weight: bold;
+    font-size: larger; 
+}
+
+#buttonRow{
+    align-items: center;
+}
+
+.button {
+    width: 50%;
+}
+
